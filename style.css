@@ -278,6 +278,13 @@ transition: all var(--animation-duration) easy-in;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 20px;
+    
+    
+}
+.work__projects__holder{
+    display: flex;
+    justify-content: center;
 }
 
 .project {
@@ -324,6 +331,7 @@ transition: all var(--animation-duration) easy-in;
     content: '';
     display: block;
     position: relative;
+    
     left: 50%;
     width: 25px;
     height: 2px;
