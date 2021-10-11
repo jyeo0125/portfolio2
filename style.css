@@ -352,7 +352,7 @@ transition: all var(--animation-duration) easy-in;
 /* Condtact */
 
 #contact {
-    background-color: var(--color-blue);
+    background-color: #29336d;
 }
 .contact__title,
 .contact__email {
