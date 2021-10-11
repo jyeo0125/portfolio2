@@ -339,3 +339,27 @@ transition: all var(--animation-duration) easy-in;
     margin-top: 8px;
     background-color: var(--color-dark-white);
 }
+
+/* Condtact */
+
+#contact {
+    background-color: var(--color-blue);
+}
+.contact__title,
+.contact__email {
+    color: var(--color-white);
+}
+
+.contact__title{
+    margin: 30px 0;
+}
+
+.contact__links {
+    font-size: var(--font-large);
+    margin: 25px 0;
+    transition: all var(--animation-duration) ease-in;
+}
+.contact__links i:hover {
+    transform: scale(1.1);
+    color: var(--color-dark-white);
+}
