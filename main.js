@@ -1,4 +1,13 @@
 'use strict'
+// Scroll Function
+
+function scrollIntoView(selector)  {
+    const scrollTo = document.querySelector(selector)
+    scrollTo.scrollIntoView({behavior:'smooth'})
+}
+
+
+
 // Make navbar transparent when it is in the top
 const navbar = document.querySelector('#navbar')
 const navbarHeight = navbar.getBoundingClientRect().height
@@ -6,7 +15,7 @@ const navbarHeight = navbar.getBoundingClientRect().height
 document.addEventListener('scroll', ( )=> {
     // console.log(window.scrollY)
     // console.log(`navbarHeight: ${navbarHeight}`)
-
+    
     if(window.scrollY > navbarHeight) {
         navbar.classList.add('navbar--dark')
     } else {
@@ -24,8 +33,13 @@ navbarMenu.addEventListener('click', (event)=>{
     if (link == null){
         return
     }else {
-        console.log(event.target.dataset.link);
-        const scrollTo = document.querySelector(link)
-        scrollTo.scrollIntoView({behavior:'smooth'})
+        // console.log(event.target.dataset.link);
+        scrollIntoView(link)
     }
+})
+// Handle Contack me btn 
+const homeContactBtn = document.querySelector('.home__contact')
+
+homeContactBtn.addEventListener('click', ()=>{
+    scrollIntoView('#contact')
 })
