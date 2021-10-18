@@ -381,6 +381,23 @@ transition: all var(--animation-duration) easy-in;
     transform: scale(1.1);
     color: var(--color-dark-white);
 }
+
+/* Arrow */
+.arrow-up{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font-size: 55px;
+    color: royalblue;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 300ms ease-in;
+}
+.arrow-up.visible {
+    opacity: 1;
+    pointer-events: auto;
+    
+}
 /* For blow 768px screen size */
 @media screen and (max-width: 768px) { 
     .navbar__toggle-btn{
