@@ -1,10 +1,4 @@
 'use strict'
-// Scroll Function
-
-function scrollIntoView(selector)  {
-    const scrollTo = document.querySelector(selector)
-    scrollTo.scrollIntoView({behavior:'smooth'})
-}
 
 
 
@@ -43,3 +37,25 @@ const homeContactBtn = document.querySelector('.home__contact')
 homeContactBtn.addEventListener('click', ()=>{
     scrollIntoView('#contact')
 })
+
+// home section transparent with scrolling 
+
+const home = document.querySelector('#home_container')
+const homeHeight = home.getBoundingClientRect().height
+
+document.addEventListener('scroll', ()=>{
+    home.style.opacity = 1 -window.scrollY / homeHeight
+})
+
+
+
+
+
+
+
+// Function
+
+function scrollIntoView(selector)  {
+    const scrollTo = document.querySelector(selector)
+    scrollTo.scrollIntoView({behavior:'smooth'})
+}
