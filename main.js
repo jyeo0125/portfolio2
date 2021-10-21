@@ -16,6 +16,9 @@ document.addEventListener('scroll', ( )=> {
         navbar.classList.remove('navbar--dark')
     }
 });
+
+
+
 //Handle scrolling when tapping on the navbar menu
 
 const navbarMenu =  document.querySelector('.navbar__menu')
@@ -26,11 +29,22 @@ navbarMenu.addEventListener('click', (event)=>{
     
     if (link == null){
         return
-    }else {
-        // console.log(event.target.dataset.link);
-        scrollIntoView(link)
     }
+    navbarMenu.classList.remove('open')
+    scrollIntoView(link)
+    
 })
+
+// Navbar toggle btn for small and mobile
+
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
+});
+
+
+
+
 // Handle Contack me btn 
 const homeContactBtn = document.querySelector('.home__contact')
 
