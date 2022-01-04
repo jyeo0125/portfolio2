@@ -409,7 +409,7 @@ transition: all var(--animation-duration) easy-in;
     pointer-events: auto;
     
 }
-/* For blow 768px screen size */
+/* For under 768px screen size */
 @media screen and (max-width: 768px) { 
     .navbar__toggle-btn{
         display: block;
